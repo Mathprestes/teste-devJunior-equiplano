@@ -1,0 +1,118 @@
+html {
+	background-color: #DCDCDC;
+}
+
+.corpo {
+	margin-top: 11%;
+	text-align-last: center;
+	background-color: rgb(255, 255, 255);
+}
+
+.btnHome {
+	width: 9%;
+	padding: 1%;
+	display: table-cell;
+}
+
+
+<!-- <!-- <!-- <!-- <!-- <!-- <!-- <!--
+
+.corpoClientes {
+	margin-top: 8%;
+	text-align: -webkit-center;
+}
+
+.botoesClientes {
+	width: 10%;
+	padding: 1%;
+	display: inline;
+	margin-left: 41% !important;
+}
+
+.btnVoltar {
+	margin-left: 45%;
+    width: 10%;
+}
+
+.inp0 {
+	width: 4%;
+	text-align: center;
+}
+
+.inp1 {
+	width: 25%;
+	text-align: center;
+}
+
+.inp2 {
+	width: 20%;
+	text-align: center;
+}
+
+.inp3 {
+	width: 15%;
+	text-align: center;
+}
+
+.inp4 {
+	width: 5%;
+	text-align: center;
+	text-align: center;
+}
+
+.tabela {
+	height: 300px;
+	overflow: scroll;
+}
+
+<!-- <!-- <!-- <!-- <!-- <!-- <!-- <!--
+
+.corpoApolices {
+	margin-top: 8%;
+	text-align: -webkit-center;
+}
+
+.botoesApolices {
+	width: 10%;
+	padding: 1%;
+	display: inline;
+	margin-left: 41% !important;
+}
+
+.btnVoltar {
+	margin-left: 45%;
+    width: 10%;
+}
+
+.inpA0 {
+	width: 4%;
+	text-align: center;
+}
+
+.inpA1 {
+	width: 15%;
+	text-align: center;
+}
+
+.inpA2 {
+	width: 20%;
+	text-align: center;
+}
+
+.inpA3 {
+	width: 20%;
+	text-align: center;
+}
+
+.inpA4 {
+	width: 9%;
+	text-align: center;
+}
+
+.inpA5 {
+	width: 8%;
+	text-align: center;
+}
+
+
+

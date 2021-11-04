@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link type="text/css" href="css/estilos.css" rel="stylesheet" />
+    <title> Teste para a Vaga de Desenvolvedor Juniot | Java Web | Spring Boot </title>
+</head>
+
+<body>
+
+	<div class="corpo">
+	
+       <h1 class="mb-5"> Teste - Seguradora de Veiculos </h1>
+       <h2 class="mb-4"> Matheus Gouveia Prestes </h2>
+       <h3 class="mb-3"> matheus.prestes_@outlook.com </h3>
+       
+       <div class="btnHome"> 
+       
+       		<a href="index" class="btn btn-primary mt-1"> CRUD de Clientes </a>
+       		<a href="index2" class="btn btn-warning mt-1"> CRUD de Apolices </a>
+       
+       </div>
+       
+       <h1 class="mt-5 mb-2"> Consulta de Apolices </h1>
+       
+       <div class="btnHome"> 
+       
+       <button type="button" class="btn btn-success mt-2" data-bs-toggle="modal" data-bs-target="#modalPesquisa1"> Verificar Placa | Valor </button>
+       <button type="button" class="btn btn-info mt-2" data-bs-toggle="modal" data-bs-target="#modalPesquisa2"> Verificar Datas </button>
+       
+       </div>
+       
+    </div>
+    
+    <!--  MODAL DE CONSULTA DA PLACA E VALOR PELO NUMERO DA APOLICE -->
+    <div class="modal fade" id="modalPesquisa1" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content">
+			
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel"> Pesquisa de Apolices </h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				
+				<div class="modal-body">
+				
+					<form>
+						<div class="mb-3">
+							<label for="apoliceBusca1" class="col-form-label"> Informe seu Número da Apolice: </label>
+							<input type="text" class="form-control" id="apoliceBusca1">
+						</div>
+						<button type="button" class="btn btn-success mb-3" onclick="pesquisaApolice1()"> Buscar </button>
+					</form>
+                    
+                    <div class="tabela">
+					<table id="tabelaresultados1" class="table table-success table-striped">
+						<thead>
+							<tr> 
+								<th scope="col"> ID </th>
+								<th scope="col"> Número da Apolice </th>
+								<th scope="col"> Valor da Apolice </th>
+								<th scope="col"> Placa do Veiculo </th>
+							</tr>
+						</thead>
+						<tbody> </tbody>
+					</table>
+				    </div>
+				</div>
+				
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-bs-dismiss="modal"> Fechar </button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ------------------------------------------------------------------------  -->
+	
+	<!--  MODAL DE CONSULTA DAS DATAS PELO NUMERO DA APOLICE -->
+    <div class="modal fade" id="modalPesquisa2" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content">
+			
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel"> Pesquisa de Apolices </h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				
+				<div class="modal-body">
+				
+					<form>
+						<div class="mb-3">
+							<label for="apoliceBusca2" class="col-form-label"> Informe seu Número da Apolice: </label>
+							<input type="text" class="form-control" id="apoliceBusca2">
+						</div>
+						<button type="button" class="btn btn-success mb-3" onclick="pesquisaApolice2()"> Buscar </button>
+					</form>
+                    
+                    <div class="tabela">
+					<table id="tabelaresultados2" class="table table-success table-striped">
+						<thead>
+							<tr> 
+								<th scope="col"> ID </th>
+								<th scope="col"> Número da Apolice </th>
+								<th scope="col"> Inicio de Vigência </th>
+								<th scope="col"> Fim de Vigência </th>
+							</tr>
+						</thead>
+						<tbody> </tbody>
+					</table>
+				    </div>
+				</div>
+				
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger"
+						data-bs-dismiss="modal"> Fechar </button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/scriptConsulta.js"> </script>
+    
+</body>
+</html>

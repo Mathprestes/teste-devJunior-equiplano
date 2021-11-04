@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link type="text/css" href="css/estilos.css" rel="stylesheet" />
+    <title> Teste para a Vaga de Desenvolvedor Juniot | Java Web | Spring Boot </title>
+</head>
+
+<body onload="setRand()">
+
+	<div class="corpoApolices">
+
+	   <h1 class="mb-3"> Cadastro de Apolices </h1>
+	   
+	   <h6> Atualize a pagina </h6> 
+	   <h6> Para gerar um novo numero de Apolice </h6>
+
+       <form action="" id="formCadApolices">
+
+           <div class="mb-3 mt-5">
+               <label for="numero_apolice" class="form-label"> Numero Apolice </label>
+               <input type="text" class="inpA1 form-control" id="numero_apolice"  placeholder="Numero gerado automaticamente" readonly="readonly">
+           </div>
+
+           <div class="mb-3">
+               <label for="inicio_vigencia" class="form-label"> Inicio Vigencia </label>
+               <input type="date" class="inpA2 form-control" id="inicio_vigencia" required="required">
+           </div>
+           
+           <div class="mb-3">
+               <label for="fim_vigencia" class="form-label"> Fim Vigencia </label>
+               <input type="date" class="inpA3 form-control" id="fim_vigencia" required="required">
+           </div>
+           
+           <div class="mb-3">
+               <label for="placa_veiculo" class="form-label"> Placa do Veiculo </label>
+               <input type="text" class="inpA4 form-control" id="placa_veiculo" required="required">
+           </div>
+           
+           <div class="mb-3">
+               <label for="valor_apolice" class="form-label"> Valor Apolice </label>
+               <input type="text" class="inpA5 form-control" id="valor_apolice" required="required">
+           </div>
+       </form>
+    </div>
+       
+    <div class="botoesApolices">
+
+       <button type="button" class="btn btn-primary mt-2"   onclick="salvarApolices()"> Salvar </button>
+       <button type="button" class="btn btn-secondary mt-2" onclick="document.getElementById('formCadApolices').reset();"> Novo </button>
+	   <button type="button" class="btn btn-warning mt-2" data-bs-toggle="modal" data-bs-target="#modalPesquisa"> Pesquisar </button>
+       <button type="button" class="btn btn-danger mt-2"   onclick="botaoDeletar()"> Deletar </button>
+       
+	</div>
+	
+	<br>
+	   
+	<a href="home" class="btn btnVoltar btn-outline-dark mt-3 mb-4"> Voltar </a>
+	
+	<div class="modal fade" id="modalPesquisa" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content">
+			
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel"> Pesquisa de Apolices </h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				
+				<div class="modal-body">
+				
+					<form>
+						<div class="mb-3">
+							<label for="apoliceBusca" class="col-form-label"> Informe seu Número da Apolice: </label>
+							<input type="text" class="form-control" id="apoliceBusca">
+						</div>
+						<button type="button" class="btn btn-success mb-3" onclick="pesquisaApolice()"> Buscar </button>
+					</form>
+                    
+                    <div class="tabela">
+					<table id="tabelaresultados" class="table table-success table-striped">
+						<thead>
+							<tr> 
+								<th scope="col"> ID </th>
+								<th scope="col"> Número da Apolice </th>
+								<th scope="col"> Editar </th>
+								<th scope="col"> Deletar </th>
+							</tr>
+						</thead>
+						<tbody> </tbody>
+					</table>
+				    </div>
+				</div>
+				
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger"
+						data-bs-dismiss="modal"> Fechar </button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/scriptApolice.js"> </script>
+    
+</body>
+</html>
